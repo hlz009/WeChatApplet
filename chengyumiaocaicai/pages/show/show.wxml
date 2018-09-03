@@ -1,0 +1,10 @@
+<view class="container">
+  <view>
+   <text>您目前的等级：</text>
+   <text>{{idiom.gradeName}}</text>
+  </view>
+  <view>
+    <image style="width: 100px; height: 100px;" src="{{idiom.gradeImg}}"></image>  
+  </view>
+</view>
+

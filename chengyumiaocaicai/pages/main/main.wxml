@@ -1,0 +1,43 @@
+<view>
+  <view class="title">
+      <text>第{{sort}}关</text>
+  </view>
+  <view class="content-first">
+  <view class="view_img">
+    <image class="img_box" src="{{idiom_img_url}}"></image>  
+  </view>
+  <view class="view_button">
+    <view class="base_button tips_button">
+      <button bindtap="tips" hover-stay-time="100" class="button_fontsize_25" style="background-color:rgba(0,204,0,0.4);"><text>提示</text></button>
+    </view>
+    <view class="base_button">
+      <button bindtap="help" open-type="share" hover-stay-time="100" class="button_fontsize_25" style="background-color:rgb(204,204,102)">求助</button>
+    </view>
+    <view class="base_button">
+      <button open-type="share" type="warn" hover-stay-time="100" class="button_fontsize_25">分享</button>
+    </view>
+  </view>
+  </view> 
+  <view class="content-second">
+    <view class="view_text">
+      <input class="text_input {{record_sort_text[0] !=-1? 'text_option': ''}}" disabled id="0" value="{{record_option_text[0]}}" bindtap='cancelText'></input>
+      <input class="text_input {{record_sort_text[1] !=-1? 'text_option': ''}}" disabled id="1" value="{{record_option_text[1]}}" bindtap='cancelText'></input>
+      <input class="text_input {{record_sort_text[2] !=-1? 'text_option': ''}}" disabled id="2" value="{{record_option_text[2]}}" bindtap='cancelText'></input>
+      <input class="text_input {{record_sort_text[3] !=-1? 'text_option': ''}}" disabled id="3" value="{{record_option_text[3]}}" bindtap='cancelText'></input>        
+    </view>
+    <view class="view_answeroption">
+    <input wx:for="{{option}}" wx:key="*this" id="{{index}}"
+     class="{{index==selectIdiom[index] ? 'cancel_text_option' : 'text_input text_option'}}" bindtap='addText' name="option{{index}}" disable value="{{index==selectIdiom[index] ? '' :item}}" ></input>
+    </view>
+  </view> 
+  <view>
+  <modal hidden="{{success_hidden}}" title="{{success_text}}" confirm-text="确定" bindconfirm="confirm" >
+    成语解释：很好啊 啊啊   
+</modal>
+  </view>
+<view>
+     <toast hidden="{{error_hidden}}" icon="clear" duration="2000" bindchange="error_open" bindtap="error_close">
+        不对哦！
+    </toast>
+</view>
+</view>

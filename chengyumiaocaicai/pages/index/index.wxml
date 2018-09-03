@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="base-button">
+    <view class="start-button">
+      <button bindtap="start">开始猜猜</button>
+    </view>
+    <view class="show-button">
+      <button bindtap="show" hover-stay-time="500">历史成就</button>
+    </view>
+  </view>
+    <view style="width:100%;">
+     <button wx:if="{{!hasUserInfo}}" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 允许微信获取你的用户信息 </button> 
+    </view>
+</view>
