@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="main">
+    <view class="works {{!item.small? 'works_small':''}}" wx:for="{{list}}" wx:key="unique">
+      <view><text>作品名：{{item.name}}</text>
+      <text wx:if="{{item.small}}" class="fold" bindtap='fold' id='{{index}}'>{{fold}}</text>
+      </view>
+      <view>副标题：{{item.name}}</view>
+      <view>更新时间：{{item.updatetimeStr}}</view>
+      <view wx:if="{{item.small && foldArray[index]==0 }}">{{item.smallContent}}</view>
+      <view wx:else>{{item.content}}</view>
+    </view>
+  <view class="next" wx:if="{{next}}">下面还有哦</view>
+  <view class="next" wx:else>我已经到底了</view>
+  </view>
+</view>

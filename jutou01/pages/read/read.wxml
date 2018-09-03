@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="search">
+    <input class='input' placeholder='剧透一下' placeholder-style='text-align:center'></input>
+    <icon type="search" class="search_icon" size="28" bindtap='search' color="blue"/>
+  </view>
+  <view class="main">
+    <view wx:for="{{list}}" wx:key='unique' id="{{index}}" class="list" bindtap='getInfo'>
+      <view><text>{{item.name}}</text></view>
+      <view class='userInfo'>
+        <block wx:if='{{item.worksDTO.isAnonymous == 1}}'>
+          <view class="userInfo_nickname">匿名</view>
+          <view><image class="userInfo_img" src=''></image></view>
+        </block>
+        <block wx:else>
+          <view class="userInfo_nickname">{{item.userDTO.nickname}}</view>
+          <view><image class="userInfo_img" src='{{item.userDTO.avatarUrl}}'></image></view>
+        </block>
+        <view>{{item.worksDTO.updatetimeStr}}</view>
+        <view wx:if='{{item.worksDTO.small}}'>{{item.worksDTO.smallContent}}</view> 
+        <view wx:else>{{item.worksDTO.content}}</view>
+      </view>
+    </view>
+    <view class="next" wx:if="{{next}}">下面还有哦</view>
+    <view class="next" wx:else>我已经到底了</view>  
+  </view>
+</view>

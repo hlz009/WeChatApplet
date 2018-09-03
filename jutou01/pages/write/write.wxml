@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="form_body">
+    <view class="name">
+        <input class="input" maxlength="20"  placeholder='作品名' placeholder-style='text-align:center' bindinput='nameInput'></input>
+    </view>
+    <view class="title">
+        <input class="input"  maxlength="30" placeholder='副标题(可选)' placeholder-style='text-align:center' bindinput='titleInput'></input>
+    </view>
+  <view class="content">
+    <textarea class="input_content" maxlength="3000" bindinput='contenInput' placeholder="请输入您的剧透" />
+  </view>      
+    <view class="form_button">
+      <block wx:if="{{!hasUserInfo && canIUse}}">
+        <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+        <text class="warn_tip">*只有登录，才能提交写的作品哦！</text>
+      </block>
+      <block wx:else>
+          <button  bindtap='submit' class="button_submit">提交</button>
+          <checkbox-group bindchange="anonymous" style="display:inline">
+            <label>
+                <checkbox  value='1' class='check_submit' />
+                <text class="check_text">匿名</text>
+            </label>
+          </checkbox-group>
+      </block>
+    </view>
+  </view>
+</view>

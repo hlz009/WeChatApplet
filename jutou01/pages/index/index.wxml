@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="common_use">
+    <text bindtap='read'>看剧透</text>
+  </view>
+
+  <view class="common_use">
+    <text bindtap='write'>写剧透</text>
+  </view>
+
+  <view class="common_use">
+    <text bindtap='my'>我的剧透</text>
+  </view>
+</view>

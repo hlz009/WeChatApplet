@@ -1,0 +1,43 @@
+/**index.wxss**/
+.container{
+  padding:30rpx 0;
+}
+.form_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx 0;
+  padding: 30rpx 0;
+}
+.warn_tip{
+  font-size:30rpx;
+  color: red;
+}
+.input{
+  border: 1px solid #333;
+  margin:20rpx 0;
+  float: left;
+  width:450rpx;
+  height:80rpx;
+  text-align: center;
+}
+.input_content{
+  border: 1px solid #333;
+  width:600rpx;
+  height:600rpx;
+  margin:30rpx 0; 
+}
+.button_submit{
+  float:left;
+}
+.check_submit{
+margin:37rpx 0 10rpx 80rpx;
+font-size:20rpx;
+zoom:70%;
+float:left;
+}
+.check_text{
+  line-height:40px;
+  float:left;
+  font-size:30rpx;
+}

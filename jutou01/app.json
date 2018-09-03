@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/write/write",
+    "pages/read/read",
+    "pages/my/my",
+    "pages/info/info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "剧透",
+    "navigationBarTextStyle": "black"
+  }
+}

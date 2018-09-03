@@ -1,0 +1,4 @@
+.common_use{
+  font-size:50rpx;
+  margin:60rpx;
+}
